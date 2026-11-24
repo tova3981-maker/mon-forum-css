@@ -1,0 +1,177 @@
+ /*** ROOT 
+ *** Tutoriel pour utiliser les variables
+ *** https://blankthemerpg.forumactif.com/t139-utiliser-les-variables-css ***/
+
+/* VARIABLE DU MODE DE BASE (ici clair) */
+:root {
+  color-scheme: light;
+  --header: url('https://zupimages.net/up/26/45/29yn.png');
+  --PA: url('https://zupimages.net/up/25/08/phjr.jpg');
+  --lorebook: url('https://zupimages.net/up/26/04/vsyd.jpg');
+  --bunny: url('https://zupimages.net/up/26/45/r85n.png');
+
+  --neutral: #fafbfc;
+  --neutralDark: #f2f4f9;
+  --neutralDarker: #dce3f4;
+  --neutralt: #f9dffd;
+
+  --contrast: #171938;
+  --contrastLight: #232657;
+  --contrastLighter: #c3c8f3;
+
+  --accentClr: #4b57c5;
+  --accentClrDark: #333c92;
+
+  --textColor: #232657;
+  --textColorAccent: #000;
+  --newsText: #f4f4f4;
+  
+   --color1: #a67df1;
+   --color2: #4db351;
+   --color3: #df81ef;
+  
+  --carnivores: #ff69b4;
+  --herbivores: #9361ff;
+  --humains: #64aaf2;
+  
+  --groupText: #1b1d1b;
+
+  --background: radial-gradient(ellipse at bottom left, #ed9efbe3 20%, rgb(153 202 241 / 93%));  
+  --background2: radial-gradient(ellipse at top left, #da8be7bd 20%, #7fc1f5b0);
+  
+ --gradient1: linear-gradient(45deg, #e572f9, #f7d56d);
+  --gradient2: linear-gradient(135deg, #a5f3fc 0%, #c084fc 40%, #f472b6 75%, #fdba74 100%);
+
+  --border: #151515;
+  --border2: #b63dcb;
+
+  --shadowBox: 0 0 20px #23265730;
+  --shadow: -8px 3px 20px 2px #00000061;
+  --shadow1: 0px -2px 5px #232222;
+  --shadowColor: 4px 4px 0 0 var(--border);
+  
+  --title: #f6ce59;
+  
+  --blend: #94c8f1;
+  --blur: #93cde785;
+
+  --little-size: 12px;
+  --normal-size: 14px;
+  --medium-size: 16px;
+  --large-size: 18px;
+  --title-size: 22px;
+
+  --font: 'Poppins', sans-serif;
+  --button: 'Russo One', sans-serif;  
+}
+
+/* VARIABLES DU MODE INVERSE (ici sombre) */
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+  --header: url('https://zupimages.net/up/26/45/29yn.png');
+  --PA: url('https://zupimages.net/up/25/08/nrl4.jpg');
+  --lorebook: url('https://zupimages.net/up/25/52/nwxe.jpg');
+  --bunny: url('https://zupimages.net/up/26/45/a90c.png');
+  
+ --neutral: #1a1a1a;
+--neutralDark: #212121;
+--neutralDarker: #313543;
+ --neutralt: #140332;
+
+  --contrast: #e5e5f0;
+  --contrastLight: #f4f4f4;
+  --contrastLighter: #40485e;
+
+  --accentClr: #7583ff;
+  --accentClrDark: #333c92;
+
+  --textColor: #c7c5cd;
+  --textColorAccent: #e5e5f0;
+  --newsText: #f4f4f4;
+  
+   --color1: #df93ec;
+   --color2: #ff69b4;
+   --color3: #ffb300;
+  
+  --carnivores: #ff69b4;
+  --herbivores: #9361ff;
+  --humains: #64aaf2;
+  
+  --groupText: #1b1d1b;
+
+--background: radial-gradient(ellipse at bottom left, #15092be8 20%, #35053de8);  
+--background2: radial-gradient(ellipse at bottom left, #15092be8 20%, #230328e8);
+  
+--gradient1: linear-gradient(45deg, #9132a2, #2f1067);
+--gradient2: linear-gradient(205deg, #009688 0%, #7c3aed 35%, #ef81b7 70%, #fcd86d 100%);
+
+  --border: #7fcdf0;
+  --border2: #9269db;
+
+  --shadowBox: 0 0 20px var(--neutralDark);
+  --shadow: -8px 3px 20px 2px #00000061;
+  --shadow1:  0px -2px 5px #232222;
+  --shadowColor: 4px 4px 0 0 var(--border);
+  
+  --title: #72da77;
+  
+  --blend: #4b2b86;
+  --blur: #2c145863;
+ 
+}
+
+/* S'applique à TOUS les éléments du forum*/
+* {box-sizing: border-box; position: relative; /*évite que les éléments soient agrandis par le padding*/ /* SCROLLBAR CUSTOM POUR MOZILLA */transition: var(--transition);}
+
+/*** ------------------------------- ***/
+/*** TOUTES LES PAGES --------------- ***/
+/* FOND DU FORUM ---*/
+body { background: url('https://zupimages.net/up/26/45/6giv.png'); background-size: cover; font-family: var(--font); background-position: center; font-size: var(--normal-size); background-attachment: fixed; color: var(--textColor); margin: 0; padding: 0;}
+           
+                
+ body:before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: var(--background2); backdrop-filter: blur(4px); }
+          
+         
+/* SCROLLBAR --- */
+/* Scrollbar entière */
+::-webkit-scrollbar { width: 0px; background: transparent;}
+
+/* Rail */
+::-webkit-scrollbar-track { width: 4px; background: transparent;}
+
+/* Poignée */
+::-webkit-scrollbar-thumb { background: ;}
+
+/* STRUCTURE PRINCIPALE ---*/
+.main_forum { width: 1040px; /*largeur forum*/ margin: 20px auto; padding: 20px; border-radius: 5px;}
+
+/*** ----------------------------------- ***/
+/*** LIENS ET TEXTE -------------------- ***/
+
+/* LIENS DU FORUM --- */
+a { font-weight: 400; text-decoration: none; color: var(--textColorAccent);}
+
+/*liens au survol*/
+a:hover {}
+           
+  /* BOUTON CHANGEMENT DE THEME ---*/
+@media (prefers-color-scheme: dark) {
+  .color-scheme-toggle .dark {display: none;}}
+           
+   @media (prefers-color-scheme: light) {
+  .color-scheme-toggle .light {display: none;}}
+
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light { display: block; width: 100%;}
+
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light { display: none; }
+
+.color-scheme-toggle { background-color: var(--neutralDark); display: flex; font-size: 25px; width: 35px; height: 35px; color: var(--color1); text-align: center; align-items: center; padding: 5px 8px; border: 2px solid var(--color1); border-radius: 100px;}
+           
+  /* TOOLTIP - INFOBULLE DU PSEUDO ---*/
+#s-m-t-tooltip {z-index: 999; background:var(--gradient1); font-size: 9px; font-weight: 	700; border-radius: 20px; border: 2px solid var(--border); -o-transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; color: var(--textColor); max-width: 360px; word-wrap: break-word; padding: 3px 12px; display: block; margin: 24px 14px 7px 12px; font-family: 'Poppins', sans-serif; text-transform: uppercase;}                 
+   
+    /* TOP BAR ---*/        
+.top-bar {position: fixed;top: 0;left: 0;width: 100%;padding: 10px;display: flex;}      
